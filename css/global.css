@@ -1,0 +1,427 @@
+/* ============================================================
+   FM Trading F.Z.E — GLOBAL STYLES
+   Variables, reset, fonts, shared components
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Sand, stone & brass — a calm premium interior palette */
+  --ivory: #0D1113;
+  --black-deep: #0A0E10;
+  --black-soft: #242B2D;
+  --black-card: #151B1D;
+  --gold-primary: #C5964F;
+  --gold-bright: #E0B873;
+  --gold-dark: #76522C;
+  --white-warm: #C4C0B8;
+  --white-pure: #F7F2E9;
+  --green-wa: #1FA855;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Cormorant Garamond', serif;
+  --font-ui: 'Montserrat', sans-serif;
+  --font-arabic: 'Cairo', sans-serif;
+  --transition: all 0.4s ease;
+  --max-width: 1400px;
+
+  /* Premium surface tokens */
+  --gold-gradient: linear-gradient(135deg, #76522C, #C5964F 45%, #E0B873 55%, #C5964F 80%);
+  --card-gradient: linear-gradient(145deg, #1A2224, #111719);
+  --card-gradient-hover: linear-gradient(145deg, #253033, #151C1E);
+  --shadow-soft: 0 16px 36px rgba(0, 0, 0, 0.22);
+  --shadow-premium: 0 28px 65px rgba(0, 0, 0, 0.38);
+  --hairline: 1px solid rgba(224, 184, 115, 0.24);
+}
+
+/* ---------- RESET ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--white-warm);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-size: 18px;
+  /* Layered plaster/stone backdrop: soft architectural depth without a stock image */
+  background-color: var(--ivory);
+  background-image:
+    radial-gradient(ellipse 60% 42% at 50% 0%, rgba(197, 150, 79, 0.13), transparent 70%),
+    radial-gradient(ellipse 35% 55% at 0% 42%, rgba(49, 76, 78, 0.20), transparent 72%),
+    radial-gradient(ellipse 35% 55% at 100% 82%, rgba(129, 83, 42, 0.14), transparent 72%),
+    repeating-linear-gradient(90deg, rgba(224, 184, 115, 0.025) 0, rgba(224, 184, 115, 0.025) 1px, transparent 1px, transparent 92px),
+    linear-gradient(180deg, #111719 0%, #0D1113 48%, #090C0E 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white-pure);
+}
+
+.arabic {
+  font-family: var(--font-arabic);
+  direction: rtl;
+}
+
+/* ---------- LAYOUT HELPERS ---------- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-sm {
+  padding: 70px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-gold {
+  color: var(--gold-primary);
+}
+
+/* ---------- SECTION HEADINGS ---------- */
+.section-label {
+  font-family: var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  color: var(--white-pure);
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: var(--gold-primary);
+}
+
+.section-subtitle {
+  font-size: 1.3rem;
+  color: rgba(74, 67, 54, 0.7);
+  max-width: 680px;
+  margin: 0 auto 40px;
+}
+
+.divider {
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-bright));
+  margin: 0 auto 30px;
+  border-radius: 3px;
+}
+
+.divider-left {
+  margin: 0 0 30px;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 15px 34px;
+  border: 2px solid var(--gold-primary);
+  color: var(--gold-primary);
+  background: transparent;
+  border-radius: 2px;
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background: var(--gold-primary);
+  color: var(--black-deep);
+  box-shadow: 0 8px 30px rgba(184, 137, 43, 0.35);
+}
+
+.btn-solid {
+  background: var(--gold-primary);
+  color: var(--black-deep);
+}
+
+.btn-solid:hover {
+  background: transparent;
+  color: var(--gold-primary);
+  box-shadow: 0 8px 30px rgba(184, 137, 43, 0.25);
+}
+
+.btn-wa {
+  border-color: var(--green-wa);
+  color: #FFFFFF;
+  background: var(--green-wa);
+}
+
+.btn-wa:hover {
+  background: transparent;
+  color: var(--green-wa);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
+}
+
+.btn-lg {
+  padding: 18px 44px;
+  font-size: 0.9rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ---------- CARDS (shared base) ---------- */
+.card {
+  background: var(--card-gradient);
+  border: 1px solid rgba(184, 137, 43, 0.2);
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: var(--gold-primary);
+  background: var(--card-gradient-hover);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-premium);
+}
+
+/* ---------- PAGE HERO (inner pages) ---------- */
+.page-hero {
+  position: relative;
+  padding: 180px 0 90px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 28% 12%, rgba(184, 137, 43, 0.12), transparent 55%),
+    radial-gradient(circle at 82% 88%, rgba(139, 105, 20, 0.09), transparent 50%),
+    linear-gradient(180deg, #182022, #0D1113);
+  border-bottom: 1px solid rgba(224, 184, 115, 0.28);
+}
+
+.page-hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  color: var(--white-pure);
+  margin-bottom: 14px;
+}
+
+.page-hero h1 span {
+  color: var(--gold-primary);
+}
+
+.breadcrumb {
+  font-family: var(--font-ui);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.78rem;
+  color: rgba(196, 192, 184, 0.64);
+}
+
+.breadcrumb a {
+  color: var(--gold-primary);
+  transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+  color: var(--gold-bright);
+}
+
+.breadcrumb span {
+  margin: 0 10px;
+  color: var(--gold-bright);
+}
+
+/* ---------- FLOATING BUTTONS ---------- */
+.float-wa {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--green-wa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+  box-shadow: 0 8px 26px rgba(37, 211, 102, 0.5);
+  transition: var(--transition);
+  animation: wa-pulse 2.4s infinite;
+}
+
+.float-wa:hover {
+  transform: scale(1.1);
+}
+
+.float-wa svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--white-pure);
+}
+
+@keyframes wa-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 100px;
+  right: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--black-card);
+  border: 2px solid var(--gold-primary);
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: var(--transition);
+  font-size: 1.2rem;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  background: var(--gold-primary);
+  color: var(--black-deep);
+}
+
+/* ---------- PRELOADER ---------- */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ivory);
+  transition: opacity 0.45s ease, visibility 0.45s ease;
+}
+
+.preloader-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  border: 2px solid var(--gold-primary);
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: var(--gold-primary);
+  animation: preloader-pulse 1.1s ease-in-out infinite;
+}
+
+.preloader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@keyframes preloader-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.7; }
+}
+
+/* ---------- SELECTION + SCROLLBAR ---------- */
+::selection {
+  background: var(--gold-primary);
+  color: var(--black-deep);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0E10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-primary);
+}

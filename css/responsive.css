@@ -1,0 +1,241 @@
+/* ============================================================
+   RESPONSIVE — media queries 375px to 1440px
+   ============================================================ */
+
+/* ---------- LARGE DESKTOP (<= 1440px) ---------- */
+@media (max-width: 1440px) {
+  .container,
+  .nav-inner {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* ---------- SMALL DESKTOP / LAPTOP (<= 1200px) ---------- */
+@media (max-width: 1200px) {
+  .nav-links {
+    gap: 26px;
+  }
+
+  .services-grid,
+  .testimonials-grid,
+  .why-grid,
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .masonry {
+    columns: 3;
+  }
+}
+
+/* ---------- TABLET (<= 992px) ---------- */
+@media (max-width: 992px) {
+  body {
+    font-size: 17px;
+  }
+
+  /* Nav → hamburger */
+  .nav-links,
+  .nav-cta .btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Grids collapse */
+  .services-grid,
+  .testimonials-grid,
+  .services-full-grid,
+  .why-grid,
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+  }
+
+  .stat-item:nth-child(2)::after {
+    display: none;
+  }
+
+  /* Two-col layouts stack */
+  .story-grid,
+  .founder-grid,
+  .location-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .story-image .gold-box {
+    right: 20px;
+    bottom: -20px;
+  }
+
+  .founder-content h2,
+  .story-content .section-title,
+  .location-content .section-title,
+  .contact-info .section-title {
+    text-align: center;
+  }
+
+  .story-content,
+  .location-content {
+    text-align: center;
+  }
+
+  .masonry {
+    columns: 2;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- LARGE MOBILE (<= 768px) ---------- */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-sm {
+    padding: 50px 0;
+  }
+
+  .page-hero {
+    padding: 140px 0 60px;
+  }
+
+  .hero {
+    min-height: 560px;
+  }
+
+  .services-grid,
+  .testimonials-grid,
+  .services-full-grid,
+  .why-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-item::after {
+    display: none !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .marquee-item {
+    font-size: 1.2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ---------- MOBILE (<= 576px) ---------- */
+@media (max-width: 576px) {
+  .container,
+  .nav-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .masonry {
+    columns: 1;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .service-full-card,
+  .contact-form-wrap,
+  .founder-card {
+    padding: 32px 24px;
+  }
+
+  .gallery-filters {
+    gap: 10px;
+  }
+
+  .filter-btn {
+    padding: 9px 18px;
+    font-size: 0.72rem;
+  }
+
+  .lightbox-nav {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+
+  .lightbox-prev { left: 10px; }
+  .lightbox-next { right: 10px; }
+
+  .float-wa {
+    width: 54px;
+    height: 54px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .scroll-top {
+    bottom: 86px;
+    right: 20px;
+  }
+}
+
+/* ---------- SMALL MOBILE (<= 375px) ---------- */
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .nav-logo {
+    font-size: 1.4rem;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .btn {
+    padding: 13px 26px;
+    font-size: 0.76rem;
+  }
+}
