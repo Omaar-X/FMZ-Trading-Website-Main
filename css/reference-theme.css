@@ -143,7 +143,7 @@ h1, h2, h3, h4, h5, h6,
   z-index: 4;
   top: 18%;
   right: 9%;
-  width: min(31vw, 410px);
+  width: min(34vw, 460px);
   padding: 22px;
   border: 1px solid rgba(6,60,61,.12);
   border-radius: 22px;
@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6,
 }
 .offer-topline { display: flex; justify-content: space-between; align-items: center; color: #0A5D61; font: 700 .64rem var(--font-ui); letter-spacing: 1.6px; text-transform: uppercase; }
 .offer-index { color: rgba(69,86,90,.48); }
-.offer-visual { position: relative; height: 145px; margin: 18px 0 20px; overflow: hidden; display: flex; align-items: end; padding: 18px; border-radius: 14px; background: linear-gradient(135deg, #E8F4F1 0 58%, #F5B64A 58% 100%); }
+.offer-visual { position: relative; aspect-ratio: 3 / 2; margin: 18px 0 20px; overflow: hidden; display: flex; align-items: end; padding: 18px; border-radius: 14px; background: linear-gradient(135deg, #E8F4F1 0 58%, #F5B64A 58% 100%); }
 .offer-visual::before { content: ''; position: absolute; width: 180px; height: 180px; top: -70px; right: -22px; border-radius: 50%; background: #0A5D61; opacity: .94; }
 .offer-visual::after { content: ''; position: absolute; left: 0; right: 0; bottom: 20px; height: 1px; background: rgba(6,60,61,.24); }
 .offer-visual-word { position: relative; z-index: 1; color: #063C3D; font: 800 clamp(1.5rem, 4vw, 2.7rem) var(--font-display); letter-spacing: -.04em; }
@@ -160,9 +160,11 @@ h1, h2, h3, h4, h5, h6,
 .offer-visual.offer-theme-feature { background: linear-gradient(135deg, #F1EAF5 0 58%, #F5B64A 58% 100%); }
 .offer-visual.offer-theme-feature::before { background: #063C3D; border-radius: 14px; width: 145px; height: 110px; top: 20px; right: 24px; }
 .offer-visual.offer-theme-feature .offer-swatch { background: #F1EAF5; transform: rotate(45deg); border-radius: 5px; }
-.offer-visual.offer-theme-flooring { background: linear-gradient(135deg, #F5F0E8 0 58%, #0A5D61 58% 100%); }
-.offer-visual.offer-theme-flooring::before { background: repeating-linear-gradient(45deg, #C28B4A 0 11px, #F5D6A2 11px 22px); border-radius: 8px; width: 180px; height: 100px; top: 24px; right: 16px; transform: rotate(-8deg); }
-.offer-visual.offer-theme-flooring .offer-swatch { background: #F5B64A; border-radius: 5px; transform: rotate(-12deg); }
+.offer-visual.offer-theme-flooring { background-image: linear-gradient(to top, rgba(6,32,33,.82) 0%, rgba(6,32,33,.25) 42%, rgba(6,32,33,0) 72%), url('../assets/images/flooring/hallway-grey.jpg'); background-size: cover; background-position: center 40%; }
+.offer-visual.offer-theme-flooring::before { display: none; }
+.offer-visual.offer-theme-flooring::after { display: none; }
+.offer-visual.offer-theme-flooring .offer-swatch { display: none; }
+.offer-visual.offer-theme-flooring .offer-visual-word { color: #fff; text-shadow: 0 2px 14px rgba(0,0,0,.5); }
 .offer-tag { color: #0A5D61; font: 700 .64rem var(--font-ui); text-transform: uppercase; letter-spacing: 1.4px; }
 .offer-copy h2 { margin: 8px 0 10px; color: #101A1C; font: 700 clamp(1.65rem, 3vw, 2.45rem) var(--font-display); line-height: .98; letter-spacing: -.035em; }
 .offer-copy h2 em { color: #0A5D61; font-style: normal; }
@@ -253,8 +255,8 @@ h1, h2, h3, h4, h5, h6,
 @media (min-width: 769px) and (max-width: 1600px) {
   .home-page .hero-content { width: min(620px, 43vw); margin-left: 6%; }
   .home-page .hero-title { font-size: clamp(3rem, 4.5vw, 4.7rem); letter-spacing: -2px; }
-  .hero-offer { right: 4.5%; width: min(29vw, 360px); padding: 18px; }
-  .offer-visual { height: 125px; }
+  .hero-offer { right: 4.5%; width: min(33vw, 430px); padding: 18px; }
+  .offer-visual { aspect-ratio: 3 / 2; }
   .offer-copy h2 { font-size: clamp(1.5rem, 2.4vw, 2.05rem); }
 }
 
