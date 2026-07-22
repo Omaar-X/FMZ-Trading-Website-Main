@@ -107,7 +107,7 @@
       var item = offerData[offerIndex];
       offer.classList.add('is-swapping');
       window.setTimeout(function () {
-        offerVisual.className = 'offer-visual offer-theme-' + item.theme;
+        offerVisual.className = 'offer-visual has-slideshow offer-theme-' + item.theme;
         offerNumber.textContent = item.number;
         offerWord.textContent = item.visual;
         offerTag.textContent = item.tag;
@@ -122,5 +122,18 @@
       offerIndex = (offerIndex + 1) % offerData.length;
       updateOffer();
     }, 4800);
+  }
+
+  var slideshow = document.getElementById('offerSlideshow');
+  if (slideshow) {
+    var slides = Array.prototype.slice.call(slideshow.querySelectorAll('img'));
+    var slideIndex = 0;
+    if (slides.length > 1) {
+      window.setInterval(function () {
+        slides[slideIndex].classList.remove('active');
+        slideIndex = (slideIndex + 1) % slides.length;
+        slides[slideIndex].classList.add('active');
+      }, 1000);
+    }
   }
 })();
