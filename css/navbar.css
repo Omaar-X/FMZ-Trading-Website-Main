@@ -55,6 +55,14 @@
   letter-spacing: 0;
 }
 
+.nav-logo .logo-mark-img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
 .nav-logo .logo-sub {
   font-family: var(--font-ui);
   font-size: 0.55rem;
