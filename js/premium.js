@@ -128,12 +128,28 @@
   if (slideshow) {
     var slides = Array.prototype.slice.call(slideshow.querySelectorAll('img'));
     var slideIndex = 0;
-    if (slides.length > 1) {
-      window.setInterval(function () {
+
+    /* only the first frame ships a src — the rest carry data-src and are
+       fetched one step ahead, so the hero costs one image instead of ten */
+    function hydrate(i) {
+      var img = slides[i];
+      if (!img || !img.dataset.src) return;
+      img.src = img.dataset.src;
+      delete img.dataset.src;
+    }
+
+    if (slides.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      hydrate(1);
+
+      var timer = window.setInterval(function () {
+        if (document.hidden) return;   /* no work while the tab is backgrounded */
         slides[slideIndex].classList.remove('active');
         slideIndex = (slideIndex + 1) % slides.length;
         slides[slideIndex].classList.add('active');
-      }, 1000);
+        hydrate((slideIndex + 1) % slides.length);
+      }, 4000);
+
+      window.addEventListener('pagehide', function () { window.clearInterval(timer); });
     }
   }
 })();

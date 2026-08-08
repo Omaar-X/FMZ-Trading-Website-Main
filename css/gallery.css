@@ -86,7 +86,10 @@
   transition: var(--transition);
 }
 
-.masonry-item:hover .masonry-overlay {
+/* the tiles are keyboard-operable, so focus gets the same reveal as hover —
+   otherwise a keyboard user lands on a tile with no idea what it is */
+.masonry-item:hover .masonry-overlay,
+.masonry-item:focus-visible .masonry-overlay {
   opacity: 1;
 }
 
@@ -138,11 +141,22 @@
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.35s ease, visibility 0.35s ease;
+  /* visibility flips instantly on open (so the close button can take focus
+     right away) and is held back until the fade-out has finished on close */
+  transition: opacity 0.35s ease, visibility 0s linear 0.35s;
 }
 
 .lightbox.open {
   opacity: 1;
+  visibility: visible;
+  transition: opacity 0.35s ease, visibility 0s linear 0s;
+}
+
+/* the controls state their own visibility rather than inheriting it, so they
+   are focusable the instant .open lands — an inherited value can still be
+   stale when the dialog moves focus to the close button */
+.lightbox.open .lightbox-close,
+.lightbox.open .lightbox-nav {
   visibility: visible;
 }
 

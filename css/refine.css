@@ -182,8 +182,8 @@
 
 .motion-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
 }
 
 .motion-card {
@@ -241,7 +241,7 @@
   text-shadow: 0 1px 6px rgba(0, 0, 0, .45);
 }
 
-.motion-body { padding: 24px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+.motion-body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
 
 .motion-tag {
   font: 700 .62rem var(--font-ui);
@@ -253,7 +253,7 @@
 .motion-body h3 {
   margin: 9px 0 10px;
   font-family: var(--font-display);
-  font-size: 1.42rem;
+  font-size: 1.3rem;
   line-height: 1.2;
   letter-spacing: -.02em;
   color: #101A1C;
@@ -262,17 +262,45 @@
 .motion-body p {
   margin-bottom: 18px;
   color: rgba(69, 86, 90, .76);
-  font-size: 1rem;
+  font-size: .96rem;
   line-height: 1.52;
 }
 
 .motion-body .text-link { margin-top: auto; align-self: flex-start; }
 
+/* the closing film runs full width — media beside copy instead of above it */
+.motion-card-wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+
+.motion-card-wide .motion-media { flex: 0 0 50%; }
+
+.motion-card-wide .motion-body {
+  justify-content: center;
+  padding: 34px 40px;
+}
+
+.motion-card-wide .motion-body h3 { font-size: 1.62rem; }
+.motion-card-wide .motion-body p { max-width: 46ch; font-size: 1rem; }
+.motion-card-wide .motion-body .text-link { margin-top: 4px; }
+
+@media (max-width: 1180px) {
+  .motion-grid { grid-template-columns: 1fr 1fr; gap: 26px; }
+  .motion-body h3 { font-size: 1.42rem; }
+  .motion-body p { font-size: 1rem; }
+}
+
 @media (max-width: 960px) {
   .motion-head { grid-template-columns: 1fr; gap: 18px; }
   .motion-head p { margin-left: 0; }
-  .motion-grid { grid-template-columns: 1fr 1fr; }
-  .motion-grid .motion-card:last-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 900px) {
+  .motion-card-wide { flex-direction: column; }
+  .motion-card-wide .motion-media { flex: none; }
+  .motion-card-wide .motion-body { padding: 22px 22px 24px; }
+  .motion-card-wide .motion-body h3 { font-size: 1.42rem; }
 }
 
 @media (max-width: 620px) {
@@ -471,10 +499,34 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
-select:focus-visible {
+select:focus-visible,
+[role="button"]:focus-visible {
   outline: 2px solid #F5B64A;
   outline-offset: 3px;
 }
+
+/* the <main> target only takes focus programmatically (skip link, lightbox
+   return) — it should never draw a ring of its own */
+main:focus { outline: none; }
+
+/* ---------- 10b. SKIP LINK ---------- */
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 2000;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #0A5D61;
+  color: #fff;
+  font: 700 .9rem var(--font-ui);
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(6, 60, 61, .3);
+  transform: translateY(-160%);
+  transition: transform .2s ease;
+}
+
+.skip-link:focus { transform: translateY(0); }
 
 /* ---------- 11. MOTION SAFETY ---------- */
 @media (prefers-reduced-motion: reduce) {
