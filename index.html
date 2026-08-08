@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/premium.css">
   <link rel="stylesheet" href="css/reference-theme.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/refine.css">
 </head>
 <body class="home-page">
 
@@ -64,6 +65,12 @@
 
   <!-- ============ HERO ============ -->
   <header class="hero">
+    <div class="hero-media" aria-hidden="true">
+      <video class="js-autoplay" autoplay muted loop playsinline preload="metadata"
+             poster="assets/Video/hero-interior-loop.jpg">
+        <source src="assets/Video/hero-interior-loop.mp4" type="video/mp4">
+      </video>
+    </div>
     <span class="hero-aurora hero-aurora-1" aria-hidden="true"></span>
     <span class="hero-aurora hero-aurora-2" aria-hidden="true"></span>
     <div class="hero-overlay"></div>
@@ -255,29 +262,92 @@
     </div>
   </section>
 
+  <!-- ============ CRAFT IN MOTION ============ -->
+  <section class="section motion-section" id="in-motion">
+    <div class="container">
+      <div class="motion-head">
+        <div class="reveal">
+          <span class="section-label">In Motion</span>
+          <h2 class="section-title">Craft You Can <span>Almost Touch</span></h2>
+        </div>
+        <p class="reveal">Fabric, glass and texture behave differently in real light. Three short films from the finishes we fit across the UAE.</p>
+      </div>
+
+      <div class="motion-grid">
+        <article class="motion-card reveal reveal-delay-1">
+          <div class="motion-media">
+            <video class="js-autoplay" muted loop playsinline preload="none"
+                   poster="assets/Video/curtains-drapery.jpg" aria-label="Sheer linen drapery moving in daylight">
+              <source src="assets/Video/curtains-drapery.mp4" type="video/mp4">
+            </video>
+            <span class="motion-index">01</span>
+          </div>
+          <div class="motion-body">
+            <span class="motion-tag">Curtains &amp; Drapery</span>
+            <h3>Light Through Linen</h3>
+            <p>Sheer inner layers, blackout outers — the weave, the fall and the way morning sun moves through both.</p>
+            <a href="services.html" class="text-link">Explore curtains <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="motion-card reveal reveal-delay-2">
+          <div class="motion-media">
+            <video class="js-autoplay" muted loop playsinline preload="none"
+                   poster="assets/Video/glass-works.jpg" aria-label="Frameless glass shower enclosure in a marble bathroom">
+              <source src="assets/Video/glass-works.mp4" type="video/mp4">
+            </video>
+            <span class="motion-index">02</span>
+          </div>
+          <div class="motion-body">
+            <span class="motion-tag">Glass Works</span>
+            <h3>Frameless &amp; Flawless</h3>
+            <p>10mm tempered panels, matte black hardware and edges polished by hand — clarity that survives daily use.</p>
+            <a href="assets/Catalogue/FM_Trading_Glass_Works_Catalogue.pdf" target="_blank" rel="noopener" class="text-link">Glass catalogue <span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="motion-card reveal reveal-delay-3">
+          <div class="motion-media">
+            <video class="js-autoplay" muted loop playsinline preload="none"
+                   poster="assets/Video/wallpaper-tv-wall.jpg" aria-label="Embossed damask wallpaper beside a fluted wood TV feature wall">
+              <source src="assets/Video/wallpaper-tv-wall.mp4" type="video/mp4">
+            </video>
+            <span class="motion-index">03</span>
+          </div>
+          <div class="motion-body">
+            <span class="motion-tag">Wallpaper &amp; TV Decor</span>
+            <h3>Texture Under Warm Light</h3>
+            <p>Embossed damask beside fluted wood panelling, lit by concealed LED so every relief reads from across the room.</p>
+            <a href="assets/Catalogue/FM_Trading_Wallpaper_Catalogue.pdf" target="_blank" rel="noopener" class="text-link">Wallpaper catalogue <span>↗</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CATALOGUE ============ -->
   <section class="section catalog-section" id="catalog">
     <div class="container">
       <div class="catalog-panel reveal">
         <div class="catalog-media">
-          <img src="assets/images/flooring/showcase-multicolor.jpg" alt="Premium flooring plank collection in a showroom setting" loading="lazy">
-          <span class="catalog-media-tag">Flooring Collection</span>
+          <img src="assets/images/catalog-thumbs/complete-product-catalogue-cover.jpg" alt="Cover of the FM Trading F.Z.E complete product catalogue" loading="lazy">
+          <span class="catalog-media-tag">Complete Product Catalogue</span>
         </div>
         <div class="catalog-body">
-          <span class="section-label">Download Catalogue</span>
-          <h2 class="section-title">Our Full <span>Flooring Range</span></h2>
+          <span class="section-label">Download Catalogues</span>
+          <h2 class="section-title">Eight Catalogues, <span>One Library</span></h2>
           <div class="divider"></div>
-          <p>Browse the complete flooring collection — parquet, laminate, vinyl and SPC finishes, water-resistant construction, and precise installation for residential and commercial spaces.</p>
+          <p>Every FM Trading range in print-ready PDF — flooring, curtains, TV decor, glass works, wallpaper and artificial grass, with specifications, finishes, sizes and product references.</p>
           <ul class="catalog-points">
-            <li>Parquet, laminate, vinyl &amp; SPC</li>
-            <li>Water-resistant &amp; scratch-proof</li>
-            <li>Professional on-site installation</li>
+            <li>Flooring, curtains &amp; TV decor collections</li>
+            <li>New: glass works &amp; wallpaper catalogues</li>
+            <li>Artificial grass landscape &amp; sport ranges</li>
           </ul>
           <div class="catalog-actions">
-            <a href="assets/Catalogue/FM_Trading_Flooring_Catalogue_.pdf" target="_blank" rel="noopener" class="btn btn-solid btn-lg">View Catalogue</a>
-            <a href="assets/Catalogue/FM_Trading_Flooring_Catalogue_.pdf" download="FM-Trading-Flooring-Catalogue.pdf" class="btn btn-lg">Download PDF</a>
+            <a href="catalog.html" class="btn btn-solid btn-lg">Browse All Catalogues</a>
+            <a href="assets/Catalogue/FM_Trading_Premium_item_Catalogue.pdf" download="FM-Trading-Complete-Product-Catalogue.pdf" class="btn btn-lg">Download Overview</a>
           </div>
-          <a href="catalog.html" class="text-link" style="margin-top:18px;">View all catalogues <span>↗</span></a>
+          <a href="catalog.html" class="text-link" style="margin-top:18px;">See the full download library <span>↗</span></a>
         </div>
       </div>
     </div>
@@ -434,6 +504,7 @@
   <script src="js/navbar.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/home.js"></script>
+  <script src="js/video.js"></script>
   <script src="js/premium.js"></script>
 </body>
 </html>

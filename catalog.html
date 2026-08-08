@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Browse and download FM Trading F.Z.E product catalogues — flooring, curtains, TV decor, and artificial grass ranges, specifications, and finishes.">
+  <meta name="description" content="Browse and download all eight FM Trading F.Z.E product catalogues — flooring, curtains, TV decor, glass works, wallpaper and artificial grass ranges, with specifications and finishes.">
   <title>Catalogues | FM Trading F.Z.E</title>
 
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/premium.css">
   <link rel="stylesheet" href="css/reference-theme.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/refine.css">
 </head>
 <body>
 
@@ -64,13 +65,19 @@
   </header>
 
   <!-- ============ INTRO ============ -->
-  <section class="section-sm">
+  <section class="section-sm" style="padding-bottom:0;">
     <div class="container">
-      <div class="catalog-page-intro">
-        <span class="section-label reveal">Downloads</span>
-        <h2 class="section-title reveal">Browse The Full <span>Product Range</span></h2>
-        <div class="divider reveal"></div>
-        <p class="reveal">Every catalogue below can be viewed instantly in your browser or downloaded as a PDF — full specifications, finishes, sizes, and product references for our flooring, curtain, TV decor, and artificial grass collections.</p>
+      <div class="cat-lede reveal">
+        <div>
+          <span class="section-label">The Download Library</span>
+          <h2 class="section-title">Every Collection, <span>In One Place</span></h2>
+          <p>Eight catalogues covering the full FM Trading range — flooring, curtains, TV decor, glass works, wallpaper and artificial grass. View any of them instantly in your browser, or download the PDF for specifications, finishes, sizes and product references.</p>
+        </div>
+        <div class="cat-stats">
+          <div class="cat-stat"><strong>08</strong><span>Catalogues</span></div>
+          <div class="cat-stat"><strong>06</strong><span>Categories</span></div>
+          <div class="cat-stat"><strong>121</strong><span>Pages</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -79,116 +86,156 @@
   <section class="section" style="padding-top:0;">
     <div class="container">
 
-      <div class="catalog-group">
-        <div class="catalog-group-head reveal">
+      <!-- filter bar -->
+      <div class="cat-toolbar reveal">
+        <div class="cat-filters" id="catFilters" role="group" aria-label="Filter catalogues by range">
+          <button type="button" class="cat-filter active" data-filter="all">All Catalogues</button>
+          <button type="button" class="cat-filter" data-filter="flooring">Flooring</button>
+          <button type="button" class="cat-filter" data-filter="curtains">Curtains</button>
+          <button type="button" class="cat-filter" data-filter="tv-decor">TV Decor</button>
+          <button type="button" class="cat-filter" data-filter="glass">Glass</button>
+          <button type="button" class="cat-filter" data-filter="wallpaper">Wallpaper</button>
+          <button type="button" class="cat-filter" data-filter="grass">Grass</button>
+        </div>
+        <p class="cat-count" id="catCount">Showing all 8 catalogues</p>
+      </div>
+
+      <!-- featured -->
+      <article class="cat-featured reveal" data-cat="all">
+        <div class="cat-featured-media">
+          <img src="assets/images/catalog-thumbs/complete-product-catalogue-cover.jpg" alt="Cover of the FM Trading F.Z.E complete product catalogue" loading="lazy">
+        </div>
+        <div class="cat-featured-body">
+          <span class="cat-featured-tag">Start Here</span>
           <h3>Complete Product Catalogue</h3>
-          <span class="catalog-group-count">1 Catalogue</span>
-        </div>
-        <div class="catalog-grid">
-          <div class="catalog-card reveal">
-            <div class="catalog-thumb"><img src="assets/images/catalog-thumbs/complete-catalogue-thumb.jpg" alt="Elegant living room showcasing FM Trading's complete interior design range" loading="lazy"></div>
-            <div class="catalog-info">
-              <h3>Complete Product Catalogue</h3>
-              <p class="catalog-meta">11 Pages &middot; PDF &middot; 0.7 MB</p>
-              <div class="catalog-actions">
-                <a href="assets/Catalogue/FM_Trading_Premium_item_Catalogue.pdf" target="_blank" rel="noopener" class="catalog-btn catalog-btn-view">View PDF</a>
-                <a href="assets/Catalogue/FM_Trading_Premium_item_Catalogue.pdf" download="FM-Trading-Complete-Product-Catalogue.pdf" class="catalog-btn catalog-btn-download">Download</a>
-              </div>
-            </div>
+          <p>The whole FM Trading range in a single file — flooring, TV decor, glass, wallpaper, artificial grass and curtains, with contact details and showroom location.</p>
+          <ul class="cat-meta">
+            <li>11 Pages</li>
+            <li>PDF</li>
+            <li>0.7 MB</li>
+          </ul>
+          <div class="cat-actions" style="max-width:340px;">
+            <a href="assets/Catalogue/FM_Trading_Premium_item_Catalogue.pdf" target="_blank" rel="noopener" class="cat-btn cat-btn-view">View PDF</a>
+            <a href="assets/Catalogue/FM_Trading_Premium_item_Catalogue.pdf" download="FM-Trading-Complete-Product-Catalogue.pdf" class="cat-btn cat-btn-dl">Download</a>
           </div>
         </div>
-      </div>
+      </article>
 
-      <div class="catalog-group">
-        <div class="catalog-group-head reveal">
-          <h3>Flooring Range</h3>
-          <span class="catalog-group-count">1 Catalogue</span>
-        </div>
-        <div class="catalog-grid">
-          <div class="catalog-card reveal">
-            <div class="catalog-thumb"><img src="assets/images/catalog-thumbs/flooring-catalogue-thumb.jpg" alt="Showcase of multicolor premium flooring finishes and wood tones" loading="lazy"></div>
-            <div class="catalog-info">
-              <h3>Flooring Catalogue</h3>
-              <p class="catalog-meta">30 Pages &middot; PDF &middot; 3.7 MB</p>
-              <div class="catalog-actions">
-                <a href="assets/Catalogue/FM_Trading_Flooring_Catalogue_.pdf" target="_blank" rel="noopener" class="catalog-btn catalog-btn-view">View PDF</a>
-                <a href="assets/Catalogue/FM_Trading_Flooring_Catalogue_.pdf" download="FM-Trading-Flooring-Catalogue.pdf" class="catalog-btn catalog-btn-download">Download</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- catalogue grid -->
+      <div class="cat-grid" id="catGrid">
 
-      <div class="catalog-group">
-        <div class="catalog-group-head reveal">
-          <h3>Curtain &amp; Drapery Range</h3>
-          <span class="catalog-group-count">1 Catalogue</span>
-        </div>
-        <div class="catalog-grid">
-          <div class="catalog-card reveal">
-            <div class="catalog-thumb"><img src="assets/images/catalog-thumbs/curtains-catalogue-thumb.jpg" alt="Luxury ornate curtain drapery framing a window with a sea view" loading="lazy"></div>
-            <div class="catalog-info">
-              <h3>Luxury Curtain Catalogue</h3>
-              <p class="catalog-meta">17 Pages &middot; PDF &middot; 2.3 MB</p>
-              <div class="catalog-actions">
-                <a href="assets/Catalogue/FM_Trading_Premium_Luxury_CURTAIN%20_Catalogue.pdf" target="_blank" rel="noopener" class="catalog-btn catalog-btn-view">View PDF</a>
-                <a href="assets/Catalogue/FM_Trading_Premium_Luxury_CURTAIN%20_Catalogue.pdf" download="FM-Trading-Curtain-Collection-Catalogue.pdf" class="catalog-btn catalog-btn-download">Download</a>
-              </div>
+        <article class="cat-card reveal" data-cat="flooring">
+          <div class="cat-stage">
+            <span class="cat-badge">Flooring</span>
+            <img src="assets/images/catalog-thumbs/flooring-catalogue-cover.jpg" alt="Cover of the FM Trading flooring catalogue" loading="lazy">
+          </div>
+          <div class="cat-body">
+            <h3>Flooring Catalogue</h3>
+            <p class="cat-desc">Parquet, laminate, vinyl and SPC ranges with colourways, plank sizes and wear ratings.</p>
+            <ul class="cat-meta"><li>30 Pages</li><li>PDF</li><li>3.7 MB</li></ul>
+            <div class="cat-actions">
+              <a href="assets/Catalogue/FM_Trading_Flooring_Catalogue_.pdf" target="_blank" rel="noopener" class="cat-btn cat-btn-view">View</a>
+              <a href="assets/Catalogue/FM_Trading_Flooring_Catalogue_.pdf" download="FM-Trading-Flooring-Catalogue.pdf" class="cat-btn cat-btn-dl">Download</a>
             </div>
           </div>
-        </div>
-      </div>
+        </article>
 
-      <div class="catalog-group">
-        <div class="catalog-group-head reveal">
-          <h3>TV Decor Range</h3>
-          <span class="catalog-group-count">1 Catalogue</span>
-        </div>
-        <div class="catalog-grid">
-          <div class="catalog-card reveal">
-            <div class="catalog-thumb"><img src="assets/images/catalog-thumbs/tv-decor-catalogue-thumb.jpg" alt="Luxury marble TV feature wall with backlit display shelving" loading="lazy"></div>
-            <div class="catalog-info">
-              <h3>TV Decor Catalogue</h3>
-              <p class="catalog-meta">15 Pages &middot; PDF &middot; 2.0 MB</p>
-              <div class="catalog-actions">
-                <a href="assets/Catalogue/FM_Trading_TV_Decor_Catalogue_.pdf" target="_blank" rel="noopener" class="catalog-btn catalog-btn-view">View PDF</a>
-                <a href="assets/Catalogue/FM_Trading_TV_Decor_Catalogue_.pdf" download="FM-Trading-TV-Decor-Catalogue.pdf" class="catalog-btn catalog-btn-download">Download</a>
-              </div>
+        <article class="cat-card reveal" data-cat="curtains">
+          <div class="cat-stage">
+            <span class="cat-badge">Curtains</span>
+            <img src="assets/images/catalog-thumbs/curtains-catalogue-cover.jpg" alt="Cover of the FM Trading luxury curtain catalogue" loading="lazy">
+          </div>
+          <div class="cat-body">
+            <h3>Luxury Curtain Catalogue</h3>
+            <p class="cat-desc">Sheer, blackout and motorised drapery with fabric families, headings and lining options.</p>
+            <ul class="cat-meta"><li>17 Pages</li><li>PDF</li><li>2.3 MB</li></ul>
+            <div class="cat-actions">
+              <a href="assets/Catalogue/FM_Trading_Premium_Luxury_CURTAIN%20_Catalogue.pdf" target="_blank" rel="noopener" class="cat-btn cat-btn-view">View</a>
+              <a href="assets/Catalogue/FM_Trading_Premium_Luxury_CURTAIN%20_Catalogue.pdf" download="FM-Trading-Curtain-Collection-Catalogue.pdf" class="cat-btn cat-btn-dl">Download</a>
             </div>
           </div>
-        </div>
-      </div>
+        </article>
 
-      <div class="catalog-group">
-        <div class="catalog-group-head reveal">
-          <h3>Artificial Grass Range</h3>
-          <span class="catalog-group-count">2 Catalogues</span>
-        </div>
-        <div class="catalog-grid">
-          <div class="catalog-card reveal">
-            <div class="catalog-thumb"><img src="assets/images/catalog-thumbs/grass-5g-catalogue-thumb.jpg" alt="ZK 5G artificial grass roll close-up texture" loading="lazy"></div>
-            <div class="catalog-info">
-              <h3>5G Artificial Grass Catalogue</h3>
-              <p class="catalog-meta">4 Pages &middot; PDF &middot; 0.5 MB</p>
-              <div class="catalog-actions">
-                <a href="assets/Catalogue/FMZ_Trading_Premium_Artificial_Grass_Catalogue.pdf" target="_blank" rel="noopener" class="catalog-btn catalog-btn-view">View PDF</a>
-                <a href="assets/Catalogue/FMZ_Trading_Premium_Artificial_Grass_Catalogue.pdf" download="FM-Trading-5G-Artificial-Grass-Catalogue.pdf" class="catalog-btn catalog-btn-download">Download</a>
-              </div>
+        <article class="cat-card reveal" data-cat="tv-decor">
+          <div class="cat-stage">
+            <span class="cat-badge">TV Decor</span>
+            <img src="assets/images/catalog-thumbs/tv-decor-catalogue-cover.jpg" alt="Cover of the FM Trading TV decor catalogue" loading="lazy">
+          </div>
+          <div class="cat-body">
+            <h3>TV Decor Catalogue</h3>
+            <p class="cat-desc">Feature wall compositions in marble, wood and panelling, with lighting and storage details.</p>
+            <ul class="cat-meta"><li>15 Pages</li><li>PDF</li><li>2.0 MB</li></ul>
+            <div class="cat-actions">
+              <a href="assets/Catalogue/FM_Trading_TV_Decor_Catalogue_.pdf" target="_blank" rel="noopener" class="cat-btn cat-btn-view">View</a>
+              <a href="assets/Catalogue/FM_Trading_TV_Decor_Catalogue_.pdf" download="FM-Trading-TV-Decor-Catalogue.pdf" class="cat-btn cat-btn-dl">Download</a>
             </div>
           </div>
+        </article>
 
-          <div class="catalog-card reveal">
-            <div class="catalog-thumb"><img src="assets/images/catalog-thumbs/grass-collection-catalogue-thumb.jpg" alt="Aerial view of an artificial grass installation on a rooftop terrace — sport, landscape and decorative collection" loading="lazy"></div>
-            <div class="catalog-info">
-              <h3>Artificial Grass Collection</h3>
-              <p class="catalog-meta">18 Pages &middot; PDF &middot; 1.1 MB</p>
-              <div class="catalog-actions">
-                <a href="assets/Catalogue/FM_Trading_Artificial_Grass_Premium_Catalogue.pdf" target="_blank" rel="noopener" class="catalog-btn catalog-btn-view">View PDF</a>
-                <a href="assets/Catalogue/FM_Trading_Artificial_Grass_Premium_Catalogue.pdf" download="FM-Trading-Artificial-Grass-Collection-Catalogue.pdf" class="catalog-btn catalog-btn-download">Download</a>
-              </div>
+        <article class="cat-card reveal" data-cat="glass">
+          <div class="cat-stage">
+            <span class="cat-badge cat-badge-new">New · Glass</span>
+            <img src="assets/images/catalog-thumbs/glass-catalogue-cover.jpg" alt="Cover of the FM Trading glass works catalogue" loading="lazy">
+          </div>
+          <div class="cat-body">
+            <h3>Glass Works Catalogue</h3>
+            <p class="cat-desc">Frameless showers, office partitions, mirrors and splashbacks with thicknesses and finishes.</p>
+            <ul class="cat-meta"><li>13 Pages</li><li>PDF</li><li>2.3 MB</li></ul>
+            <div class="cat-actions">
+              <a href="assets/Catalogue/FM_Trading_Glass_Works_Catalogue.pdf" target="_blank" rel="noopener" class="cat-btn cat-btn-view">View</a>
+              <a href="assets/Catalogue/FM_Trading_Glass_Works_Catalogue.pdf" download="FM-Trading-Glass-Works-Catalogue.pdf" class="cat-btn cat-btn-dl">Download</a>
             </div>
           </div>
-        </div>
+        </article>
+
+        <article class="cat-card reveal" data-cat="wallpaper">
+          <div class="cat-stage">
+            <span class="cat-badge cat-badge-new">New · Wallpaper</span>
+            <img src="assets/images/catalog-thumbs/wallpaper-catalogue-cover.jpg" alt="Cover of the FM Trading wallpaper catalogue" loading="lazy">
+          </div>
+          <div class="cat-body">
+            <h3>Wallpaper Catalogue</h3>
+            <p class="cat-desc">Pattern families, 3D panels and custom murals with roll sizes, materials and cleaning grades.</p>
+            <ul class="cat-meta"><li>13 Pages</li><li>PDF</li><li>2.8 MB</li></ul>
+            <div class="cat-actions">
+              <a href="assets/Catalogue/FM_Trading_Wallpaper_Catalogue.pdf" target="_blank" rel="noopener" class="cat-btn cat-btn-view">View</a>
+              <a href="assets/Catalogue/FM_Trading_Wallpaper_Catalogue.pdf" download="FM-Trading-Wallpaper-Catalogue.pdf" class="cat-btn cat-btn-dl">Download</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="cat-card reveal" data-cat="grass">
+          <div class="cat-stage">
+            <span class="cat-badge">Grass</span>
+            <img src="assets/images/catalog-thumbs/artificial-grass-collection-catalogue-cover.jpg" alt="Cover of the FM Trading artificial grass collection catalogue" loading="lazy">
+          </div>
+          <div class="cat-body">
+            <h3>Artificial Grass Collection</h3>
+            <p class="cat-desc">Landscape, sport and decorative turf ranges with pile heights, densities and backing types.</p>
+            <ul class="cat-meta"><li>18 Pages</li><li>PDF</li><li>1.1 MB</li></ul>
+            <div class="cat-actions">
+              <a href="assets/Catalogue/FM_Trading_Artificial_Grass_Premium_Catalogue.pdf" target="_blank" rel="noopener" class="cat-btn cat-btn-view">View</a>
+              <a href="assets/Catalogue/FM_Trading_Artificial_Grass_Premium_Catalogue.pdf" download="FM-Trading-Artificial-Grass-Collection-Catalogue.pdf" class="cat-btn cat-btn-dl">Download</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="cat-card reveal" data-cat="grass">
+          <div class="cat-stage">
+            <span class="cat-badge">Grass</span>
+            <img src="assets/images/catalog-thumbs/5g-artificial-grass-catalogue-cover.jpg" alt="Cover of the FM Trading 5G artificial grass catalogue" loading="lazy">
+          </div>
+          <div class="cat-body">
+            <h3>5G Artificial Grass Catalogue</h3>
+            <p class="cat-desc">The ZK 5G premium turf line — yarn structure, colourways and recommended applications.</p>
+            <ul class="cat-meta"><li>4 Pages</li><li>PDF</li><li>0.5 MB</li></ul>
+            <div class="cat-actions">
+              <a href="assets/Catalogue/FMZ_Trading_Premium_Artificial_Grass_Catalogue.pdf" target="_blank" rel="noopener" class="cat-btn cat-btn-view">View</a>
+              <a href="assets/Catalogue/FMZ_Trading_Premium_Artificial_Grass_Catalogue.pdf" download="FM-Trading-5G-Artificial-Grass-Catalogue.pdf" class="cat-btn cat-btn-dl">Download</a>
+            </div>
+          </div>
+        </article>
+
       </div>
 
       <!-- ============ CTA ============ -->
@@ -267,6 +314,7 @@
   <script src="js/main.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/animations.js"></script>
+  <script src="js/catalog.js"></script>
   <script src="js/premium.js"></script>
 </body>
 </html>

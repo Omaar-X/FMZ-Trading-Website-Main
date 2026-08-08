@@ -1,0 +1,496 @@
+/* ============================================================
+   REFINE.CSS — site-wide premium polish
+   Loaded last. Purely decorative: type, surfaces, depth, motion.
+   ============================================================ */
+
+/* ---------- 1. SECTION EYEBROW ---------- */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  padding: 7px 17px 7px 15px;
+  border: 1px solid rgba(10, 93, 97, .20);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .58);
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: 2.6px;
+  color: #0A5D61;
+  box-shadow: 0 6px 18px rgba(12, 52, 55, .06);
+}
+
+.section-label::before {
+  content: '';
+  width: 15px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #F5B64A, rgba(245, 182, 74, 0));
+}
+
+/* ---------- 2. HEADINGS ---------- */
+.section-title,
+.page-hero h1 {
+  letter-spacing: -.028em;
+  text-wrap: balance;
+}
+
+/* ---------- 3. DIVIDER ---------- */
+.divider {
+  position: relative;
+  width: 116px;
+  height: 1px;
+  border-radius: 0;
+  background: linear-gradient(90deg, rgba(10, 93, 97, 0), rgba(10, 93, 97, .55), rgba(10, 93, 97, 0));
+}
+
+.divider::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #F5B64A;
+  box-shadow: 0 0 0 3px rgba(245, 182, 74, .18);
+}
+
+.divider-left { background: linear-gradient(90deg, rgba(10, 93, 97, .55), rgba(10, 93, 97, 0)); }
+.divider-left::after { left: 6px; }
+
+/* ---------- 4. SURFACES ---------- */
+.card,
+.service-card,
+.service-full-card,
+.why-card,
+.value-card,
+.testimonial-card,
+.project-card,
+.founder-card,
+.contact-form-wrap,
+.address-block,
+.hours-table,
+.catalog-panel {
+  border-radius: 20px !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .9),
+    0 2px 6px rgba(12, 52, 55, .04),
+    0 18px 44px rgba(12, 52, 55, .09) !important;
+  transition: transform .5s cubic-bezier(.2, .8, .2, 1),
+              box-shadow .5s ease,
+              border-color .5s ease,
+              background-color .5s ease;
+}
+
+.card:hover,
+.service-card:hover,
+.service-full-card:hover,
+.why-card:hover,
+.value-card:hover,
+.testimonial-card:hover,
+.project-card:hover,
+.founder-card:hover,
+.catalog-panel:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .95),
+    0 32px 64px rgba(6, 60, 61, .17) !important;
+}
+
+/* service tiles: bigger, ringed media */
+.service-full-icon {
+  width: 104px !important;
+  height: 104px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 12px 26px rgba(6, 60, 61, .16);
+}
+
+.service-full-icon-img img { border-radius: 20px; }
+
+.service-full-card:hover .service-full-icon { transform: translateY(-6px) scale(1.04); }
+
+/* ---------- HERO BACKGROUND FILM ---------- */
+.home-page .hero { position: relative; overflow: hidden; }
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #E4EFEC;
+}
+
+.hero-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.03);   /* hides any edge wobble in the encode */
+}
+
+/* scrim: solid enough on the left for the ink headline, clear on the right */
+.hero-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg,
+      #F7FCFA 0%,
+      rgba(247, 252, 250, .97) 26%,
+      rgba(247, 252, 250, .80) 42%,
+      rgba(247, 252, 250, .22) 58%,
+      rgba(6, 60, 61, .10) 78%,
+      rgba(6, 60, 61, .30) 100%),
+    linear-gradient(180deg, rgba(247, 252, 250, .62) 0%, transparent 24%);
+}
+
+.home-page .hero-content,
+.home-page .scroll-arrow { position: relative; z-index: 3; }
+
+@media (max-width: 768px) {
+  /* stacked hero: text sits over the film, so the scrim goes vertical */
+  .hero-media::after {
+    background: linear-gradient(180deg,
+      rgba(247, 252, 250, .95) 0%,
+      rgba(247, 252, 250, .90) 46%,
+      rgba(247, 252, 250, .62) 78%,
+      rgba(6, 60, 61, .22) 100%);
+  }
+}
+
+/* ---------- CRAFT IN MOTION ---------- */
+.motion-section { background: rgba(255, 255, 255, .46); }
+
+.motion-head {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: end;
+  gap: 44px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(10, 93, 97, .18);
+}
+
+.motion-head .section-title { margin-bottom: 0; }
+
+.motion-head p {
+  max-width: 460px;
+  margin: 0 0 0 auto;
+  color: rgba(69, 86, 90, .76);
+  font-size: 1.06rem;
+  line-height: 1.6;
+}
+
+.motion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.motion-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid rgba(10, 93, 97, .14);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9), 0 18px 44px rgba(12, 52, 55, .09);
+  transition: transform .5s cubic-bezier(.2, .8, .2, 1), box-shadow .5s ease, border-color .5s ease;
+}
+
+.motion-card:hover {
+  transform: translateY(-9px);
+  border-color: rgba(10, 93, 97, .3);
+  box-shadow: 0 34px 66px rgba(6, 60, 61, .18);
+}
+
+.motion-media {
+  position: relative;
+  /* 16:9 matches the source, so nothing is cropped off the sides — including
+     the FM watermark burnt into the bottom-right of each film */
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #DCEAE6;
+}
+
+.motion-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .8s cubic-bezier(.2, .8, .2, 1);
+}
+
+.motion-card:hover .motion-media video { transform: scale(1.04); }
+
+.motion-media::after {   /* keeps the index chip legible on bright frames */
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(6, 60, 61, .30) 0%, transparent 34%);
+}
+
+.motion-index {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  z-index: 2;
+  font: 700 .7rem var(--font-ui);
+  letter-spacing: 2px;
+  color: #F5B64A;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, .45);
+}
+
+.motion-body { padding: 24px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+
+.motion-tag {
+  font: 700 .62rem var(--font-ui);
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #0A5D61;
+}
+
+.motion-body h3 {
+  margin: 9px 0 10px;
+  font-family: var(--font-display);
+  font-size: 1.42rem;
+  line-height: 1.2;
+  letter-spacing: -.02em;
+  color: #101A1C;
+}
+
+.motion-body p {
+  margin-bottom: 18px;
+  color: rgba(69, 86, 90, .76);
+  font-size: 1rem;
+  line-height: 1.52;
+}
+
+.motion-body .text-link { margin-top: auto; align-self: flex-start; }
+
+@media (max-width: 960px) {
+  .motion-head { grid-template-columns: 1fr; gap: 18px; }
+  .motion-head p { margin-left: 0; }
+  .motion-grid { grid-template-columns: 1fr 1fr; }
+  .motion-grid .motion-card:last-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 620px) {
+  .motion-grid { grid-template-columns: 1fr; gap: 20px; }
+  .motion-body { padding: 20px 20px 22px; }
+}
+
+/* about: portrait story image */
+.story-image img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 22px;
+  border-color: rgba(10, 93, 97, .16) !important;
+  box-shadow: 0 26px 58px rgba(6, 60, 61, .18);
+}
+
+.story-image .gold-box { border-radius: 16px; }
+
+/* home catalogue panel: show the real cover on a lit stage, not a crop */
+.catalog-panel {
+  border-color: rgba(10, 93, 97, .16) !important;
+  background: linear-gradient(150deg, #FFFFFF, #F1F8F6) !important;
+}
+
+.catalog-panel .catalog-media {
+  background:
+    radial-gradient(110% 80% at 50% 6%, #F4FBF9, #E2EFEB 70%, #D6E8E3 100%);
+}
+
+.catalog-panel .catalog-media img {
+  inset: 0;
+  margin: auto;
+  width: auto;
+  height: auto;
+  max-width: 68%;
+  max-height: 74%;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 22px 44px rgba(6, 60, 61, .26), 0 2px 6px rgba(6, 60, 61, .18);
+}
+
+.catalog-panel .catalog-media-tag {
+  background: rgba(6, 60, 61, .78);
+  color: #F7F2E9;
+}
+
+/* service card footer: quote button + catalogue shortcut */
+.service-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+  position: relative;
+  z-index: 2;
+}
+
+.service-cat-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-ui);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #0A5D61;
+  border-bottom: 1px solid rgba(10, 93, 97, .3);
+  padding-bottom: 3px;
+  transition: var(--transition);
+}
+
+.service-cat-link span { color: #F5B64A; font-size: .95rem; transition: transform .3s ease; }
+.service-cat-link:hover { border-bottom-color: #F5B64A; }
+.service-cat-link:hover span { transform: translate(3px, -3px); }
+
+/* ---------- 5. BUTTONS ---------- */
+.btn {
+  border-width: 1.5px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  isolation: isolate;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transform: translateX(-105%) skewX(-18deg);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .34), transparent);
+  transition: transform .65s cubic-bezier(.2, .8, .2, 1);
+}
+
+.btn:hover::before { transform: translateX(105%) skewX(-18deg); }
+
+.btn-solid {
+  background: linear-gradient(135deg, #0A5D61, #063C3D) !important;
+  border-color: transparent;
+  color: #fff !important;
+  box-shadow: 0 12px 26px rgba(10, 93, 97, .26);
+}
+
+.btn-solid:hover {
+  background: linear-gradient(135deg, #0C6E72, #07484A) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 38px rgba(10, 93, 97, .32);
+}
+
+.btn-wa { box-shadow: 0 12px 26px rgba(22, 167, 101, .26); }
+.btn-wa:hover { transform: translateY(-2px); }
+
+/* ---------- 6. NAVBAR ---------- */
+#navbar:not(.scrolled) {
+  backdrop-filter: blur(6px);
+}
+
+#navbar.scrolled {
+  backdrop-filter: blur(16px) saturate(1.35);
+}
+
+.nav-links a::after {
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #0A5D61, #F5B64A) !important;
+}
+
+.nav-logo .logo-mark-img {
+  filter: drop-shadow(0 4px 10px rgba(6, 60, 61, .22));
+}
+
+/* ---------- 7. FOOTER ---------- */
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #F5B64A, #0A5D61 46%, #F5B64A);
+}
+
+.footer::after {   /* soft brass glow, keeps the block from reading flat */
+  content: '';
+  position: absolute;
+  top: -180px;
+  right: -120px;
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 182, 74, .16), transparent 68%);
+  pointer-events: none;
+}
+
+.footer .container { position: relative; z-index: 1; }
+
+.footer-socials a {
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.footer-socials a:hover {
+  transform: translateY(-3px);
+  background: #F5B64A !important;
+}
+
+/* ---------- 8. MEDIA ---------- */
+.service-card img,
+.project-card img,
+.catalog-media img,
+.masonry-item img {
+  transition: transform .7s cubic-bezier(.2, .8, .2, 1), filter .7s ease;
+}
+
+.masonry-item { border-radius: 18px; overflow: hidden; }
+
+/* ---------- 9. FLOATING CONTROLS ---------- */
+.float-wa { box-shadow: 0 14px 34px rgba(22, 167, 101, .42); }
+
+.scroll-top {
+  background: rgba(255, 255, 255, .92);
+  border-color: rgba(10, 93, 97, .32);
+  color: #0A5D61;
+  box-shadow: 0 12px 28px rgba(12, 52, 55, .16);
+  backdrop-filter: blur(8px);
+}
+
+.scroll-top:hover { background: #0A5D61; color: #fff; }
+
+/* ---------- 10. FOCUS VISIBILITY ---------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #F5B64A;
+  outline-offset: 3px;
+}
+
+/* ---------- 11. MOTION SAFETY ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .btn::before { display: none; }
+  .card,
+  .service-card,
+  .service-full-card,
+  .why-card,
+  .value-card,
+  .testimonial-card,
+  .project-card,
+  .founder-card { transition: none; }
+}
+
+@media (max-width: 640px) {
+  .section-label { letter-spacing: 2px; padding: 6px 14px; }
+  .service-full-icon { width: 84px !important; height: 84px !important; }
+  .footer::after { display: none; }
+}
