@@ -219,6 +219,31 @@
   flex-wrap: wrap;
 }
 
+.hero-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #0A5D61;
+  font-family: var(--font-ui);
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.hero-text-link span { color: var(--gold-primary); font-size: 1.15rem; transition: transform .25s ease; }
+.hero-text-link:hover span { transform: translateX(4px); }
+
+@media (max-width: 576px) {
+  .home-page .hero-title { font-size: 2.8rem !important; letter-spacing: -1.5px; }
+  .home-page .hero-badge { font-size: .7rem; letter-spacing: 2.2px; padding: 8px 16px; }
+  .home-page .hero-slogan { font-size: 1.15rem; margin-bottom: 26px; }
+  .hero-buttons { gap: 14px; }
+  .hero-offer { max-height: 410px; overflow: hidden; }
+  .testimonials-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 12px; }
+  .testimonial-card { min-width: 86%; scroll-snap-align: center; }
+}
+
 .scroll-arrow {
   position: absolute;
   bottom: 34px;

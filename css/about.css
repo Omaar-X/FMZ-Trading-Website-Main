@@ -151,6 +151,18 @@
   color: var(--gold-primary) !important;
 }
 
+@media (max-width: 576px) {
+  .story-grid, .founder-grid, .story-content, .founder-content, .founder-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .story-grid, .founder-grid { grid-template-columns: minmax(0, 1fr); gap: 38px; }
+  .story-content, .founder-content { width: 100%; }
+  .story-image .gold-box { right: 0; bottom: -18px; padding: 20px 24px; }
+  .story-content p, .founder-content p { font-size: 1rem; line-height: 1.7; }
+  .founder-card { width: 100%; padding: 34px 24px; }
+}
+
 /* ---------- STATS STRIP (reused from home.css .stats) ---------- */
 
 /* ---------- OUR VALUES ---------- */

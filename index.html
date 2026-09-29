@@ -24,6 +24,9 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Montserrat:wght@300;400;500;600;700;800&amp;family=Cairo:wght@400;500;600;700;800&amp;display=swap">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -33,6 +36,7 @@
   <link rel="stylesheet" href="css/reference-theme.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/refine.css">
+  <link rel="stylesheet" href="css/films.css">
 
   <script type="application/ld+json">
   {
@@ -88,7 +92,7 @@
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="gallery.html">Our Work<span class="nav-film-mark" aria-hidden="true"></span></a></li>
         <li><a href="catalog.html">Catalogues</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -106,7 +110,8 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html" class="active">Home</a>
     <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
+    <a href="gallery.html">Our Work</a>
+    <a href="gallery.html#films" class="mobile-sub-link">Site Films</a>
     <a href="catalog.html">Catalogues</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
@@ -134,24 +139,24 @@
       </h1>
       <p class="hero-slogan anim-fade-up anim-delay-3">Redefine Your Space. Elevate Your Life.</p>
       <div class="hero-buttons anim-fade-up anim-delay-4">
-        <a href="services.html" class="btn btn-solid btn-lg">Explore Services</a>
-        <a href="https://wa.me/971567275998" target="_blank" rel="noopener" class="btn btn-lg">Get Free Quote</a>
+        <a href="https://wa.me/971567275998" target="_blank" rel="noopener" class="btn btn-solid btn-lg">Get Free Quote</a>
+        <a href="services.html" class="hero-text-link">Explore Services <span aria-hidden="true">→</span></a>
       </div>
     </div>
     <aside class="hero-offer floating" aria-label="Trending interior service">
       <div class="offer-topline"><span>Trending now</span><span class="offer-index">01 / 03</span></div>
       <div class="offer-visual has-slideshow">
         <div class="offer-slideshow" id="offerSlideshow" aria-hidden="true">
-          <img src="assets/images/flooring/catalog-spc-living.jpg" alt="" class="active" fetchpriority="high" decoding="async">
-          <img data-src="assets/images/flooring/catalog-spc-kitchen.jpg" alt="" decoding="async">
-          <img data-src="assets/images/grass/zk-prime-house.jpg" alt="" decoding="async">
-          <img data-src="assets/images/grass/zk-prime-swatch.jpg" alt="" decoding="async">
-          <img data-src="assets/images/grass/zk-gold-hand.jpg" alt="" decoding="async">
-          <img data-src="assets/images/grass/zk-gold-swatch.jpg" alt="" decoding="async">
-          <img data-src="assets/images/grass/zk-color-playground.jpg" alt="" decoding="async">
-          <img data-src="assets/images/grass/zk-color-swatch.jpg" alt="" decoding="async">
-          <img data-src="assets/images/grass/zk-5g-roll.jpg" alt="" decoding="async">
-          <img data-src="assets/images/grass/zk-5g-swatch.jpg" alt="" decoding="async">
+          <img src="assets/images/thumbs/flooring/catalog-spc-living-960.webp" alt="" class="active" fetchpriority="high" decoding="async" srcset="assets/images/thumbs/flooring/catalog-spc-living-480.webp 480w, assets/images/thumbs/flooring/catalog-spc-living-960.webp 960w" sizes="(max-width: 600px) 92vw, 50vw">
+          <img data-src="assets/images/thumbs/flooring/catalog-spc-kitchen-960.webp" alt="" decoding="async">
+          <img data-src="assets/images/thumbs/grass/zk-prime-house-960.webp" alt="" decoding="async">
+          <img data-src="assets/images/thumbs/grass/zk-prime-swatch-960.webp" alt="" decoding="async">
+          <img data-src="assets/images/thumbs/grass/zk-gold-hand-960.webp" alt="" decoding="async">
+          <img data-src="assets/images/thumbs/grass/zk-gold-swatch-960.webp" alt="" decoding="async">
+          <img data-src="assets/images/thumbs/grass/zk-color-playground-960.webp" alt="" decoding="async">
+          <img data-src="assets/images/thumbs/grass/zk-color-swatch-960.webp" alt="" decoding="async">
+          <img data-src="assets/images/thumbs/grass/zk-5g-roll-960.webp" alt="" decoding="async">
+          <img data-src="assets/images/thumbs/grass/zk-5g-swatch-960.webp" alt="" decoding="async">
         </div>
         <span class="offer-visual-word">DRAPERY</span>
         <span class="offer-swatch"></span>
@@ -260,8 +265,7 @@
     </div>
   </section>
 
-  <!-- ============ FEATURED SPACES / IMAGE PLACEHOLDERS ============ -->
-  <!-- Replace each .project-placeholder with an <img> when project photos are ready. -->
+  <!-- ============ FEATURED SPACES — real FM Trading installs ============ -->
   <section class="section featured-spaces">
     <div class="container">
       <div class="featured-heading">
@@ -276,39 +280,39 @@
         <article class="project-card project-card-large reveal reveal-delay-1">
           <div class="project-image">
             <span class="project-badge">01</span>
-            <img src="assets/images/flooring/living-warm-oak.jpg" alt="Warm oak SPC flooring in a modern living room" loading="lazy" decoding="async">
+            <img src="assets/images/projects/floating-tv-wall-pendant-lights.webp" alt="Panelled TV feature wall with a backlit floating frame, LED-lit console and pendant lights, installed by FM Trading" loading="lazy" decoding="async">
           </div>
           <div class="project-caption">
-            <span>Featured Floor</span>
-            <h3>Warm Oak Living</h3>
+            <span>TV Feature Wall</span>
+            <h3>Floating Frame, Warm Glow</h3>
           </div>
         </article>
 
         <article class="project-card reveal reveal-delay-2">
           <div class="project-image">
             <span class="project-badge">02</span>
-            <img src="assets/images/flooring/catalog-spc-grey-openplan.jpg" alt="Grey wood-effect SPC flooring in an open-plan living and dining space" loading="lazy" decoding="async">
+            <img src="assets/images/projects/backlit-tv-panel-fluted-slats.webp" alt="Backlit TV panel beside vertical fluted slats with a floating media shelf" loading="lazy" decoding="async">
           </div>
           <div class="project-caption">
-            <span>SPC Collection</span>
-            <h3>Grey Open-Plan</h3>
+            <span>Wall Panels</span>
+            <h3>Fluted &amp; Backlit</h3>
           </div>
         </article>
 
         <article class="project-card reveal reveal-delay-3">
           <div class="project-image">
             <span class="project-badge">03</span>
-            <img src="assets/images/flooring/catalog-spc-golden-dining.jpg" alt="Natural oak SPC flooring in a bright dining and lounge area" loading="lazy" decoding="async">
+            <img src="assets/images/projects/herringbone-oak-parquet-floor.webp" alt="Herringbone oak-effect flooring laid through a hallway with matching skirting" loading="lazy" decoding="async">
           </div>
           <div class="project-caption">
-            <span>Premium Finish</span>
-            <h3>Natural Oak Dining</h3>
+            <span>Flooring</span>
+            <h3>Herringbone Oak</h3>
           </div>
         </article>
       </div>
 
       <div class="featured-footer reveal">
-        <span>Real installs from our SPC flooring range</span>
+        <span>Photographed on site — finished FM Trading installs</span>
         <a href="gallery.html" class="text-link">Explore gallery <span>↗</span></a>
       </div>
     </div>
@@ -419,12 +423,12 @@
         </div>
         <div class="catalog-body">
           <span class="section-label">Download Catalogues</span>
-          <h2 class="section-title">Eight Catalogues, <span>One Library</span></h2>
+          <h2 class="section-title">Eleven Catalogues, <span>One Library</span></h2>
           <div class="divider"></div>
           <p>Every FM Trading range in print-ready PDF — flooring, curtains, TV decor, glass works, wallpaper and artificial grass, with specifications, finishes, sizes and product references.</p>
           <ul class="catalog-points">
             <li>Flooring, curtains &amp; TV decor collections</li>
-            <li>New: glass works &amp; wallpaper catalogues</li>
+            <li>New: three curated product collections</li>
             <li>Artificial grass landscape &amp; sport ranges</li>
           </ul>
           <div class="catalog-actions">
@@ -433,6 +437,30 @@
           </div>
           <a href="catalog.html" class="text-link" style="margin-top:18px;">See the full download library <span>↗</span></a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STRAIGHT FROM SITE — rendered by js/project-films.js ============ -->
+  <section class="section site-reels" id="site-films" aria-labelledby="siteFilmsTitle" data-film-reel>
+    <div class="container">
+      <div class="reel-head">
+        <div class="reveal">
+          <span class="section-label">Filmed On Site</span>
+          <h2 class="section-title" id="siteFilmsTitle">Straight From <span>Our Sites</span></h2>
+          <p>Unedited walk-throughs from finished jobs — feature walls, panelling, flooring and drapery, exactly as our clients received them.</p>
+        </div>
+        <div class="reel-controls reveal">
+          <button type="button" class="reel-arrow" data-reel-prev aria-label="Previous films">&#8592;</button>
+          <button type="button" class="reel-arrow" data-reel-next aria-label="More films">&#8594;</button>
+        </div>
+      </div>
+
+      <div class="reel-track"></div>
+
+      <div class="reel-foot reveal">
+        <span><strong data-film-total>14</strong> site films · tap any film to watch</span>
+        <a href="gallery.html#films" class="text-link">Watch every film <span>↗</span></a>
       </div>
     </div>
   </section>
@@ -553,7 +581,8 @@
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="gallery.html">Our Work</a></li>
+            <li><a href="gallery.html#films">Site Films</a></li>
             <li><a href="catalog.html">Catalogues</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -590,6 +619,7 @@
   <script src="js/navbar.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/home.js"></script>
+  <script src="js/project-films.js"></script>
   <script src="js/video.js"></script>
   <script src="js/premium.js"></script>
 </body>

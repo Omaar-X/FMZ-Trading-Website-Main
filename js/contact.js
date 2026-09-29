@@ -43,7 +43,7 @@
       valid = false;
     } else setError(phone.closest('.form-group'), false);
 
-    if (!isValidEmail(email.value.trim())) {
+    if (email.value.trim() && !isValidEmail(email.value.trim())) {
       setError(email.closest('.form-group'), true);
       valid = false;
     } else setError(email.closest('.form-group'), false);
@@ -64,6 +64,8 @@
     var phone = form.querySelector('#phone').value.trim();
     var email = form.querySelector('#email').value.trim();
     var service = form.querySelector('#service').value;
+    var budget = form.querySelector('#budget').value;
+    var contactMethod = form.querySelector('#contactMethod').value;
     var message = form.querySelector('#message').value.trim();
 
     /* Build a pre-filled WhatsApp message */
@@ -71,8 +73,10 @@
       'Hello FM Trading F.Z.E,%0A%0A' +
       'Name: ' + encodeURIComponent(name) + '%0A' +
       'Phone: ' + encodeURIComponent(phone) + '%0A' +
-      'Email: ' + encodeURIComponent(email) + '%0A' +
+      'Email: ' + encodeURIComponent(email || 'Not provided') + '%0A' +
       'Service: ' + encodeURIComponent(service || 'General Inquiry') + '%0A' +
+      'Budget: ' + encodeURIComponent(budget || 'Not selected') + '%0A' +
+      'Preferred contact: ' + encodeURIComponent(contactMethod) + '%0A' +
       'Message: ' + encodeURIComponent(message);
 
     var waUrl = 'https://wa.me/' + WA_NUMBER + '?text=' + text;

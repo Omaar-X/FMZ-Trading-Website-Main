@@ -257,6 +257,35 @@
   color: var(--gold-primary);
 }
 
+.form-group label .optional {
+  margin-left: 6px;
+  color: rgba(69, 86, 90, .58);
+  font-size: .68rem;
+  letter-spacing: .6px;
+}
+
+.form-photo-note {
+  margin: -6px 0 20px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(22, 167, 101, .08);
+  color: rgba(69, 86, 90, .8);
+  font-size: .9rem;
+}
+
+@media (max-width: 576px) {
+  .contact-grid, .contact-info, .contact-form-wrap, .contact-form-wrap form,
+  .form-row, .form-group, .form-group input, .form-group select, .form-group textarea {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .contact-form-wrap { width: 100%; padding: 30px 20px; }
+  .form-row { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .form-group input, .form-group select, .form-group textarea { min-height: 48px; font-size: 16px; }
+  .form-group textarea { min-height: 116px; }
+  .contact-map iframe { height: 320px; }
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {
