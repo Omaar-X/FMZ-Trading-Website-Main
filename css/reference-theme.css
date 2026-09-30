@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6,
 .btn:hover { background: #0A5D61; color: #FFFFFF; }
 .btn-solid { background: #0A5D61; color: #FFFFFF; }
 .btn-solid:hover { background: #063C3D; color: #FFFFFF; }
-.btn-wa { background: #16A765; border-color: #16A765; }
+.btn-wa { background: #16A765; border-color: #16A765; color: #FFFFFF; }
 .btn-wa:hover { color: #16A765; background: #FFFFFF; }
 
 .footer { background: linear-gradient(135deg, #063C3D, #0A5D61) !important; }
@@ -107,6 +107,8 @@ h1, h2, h3, h4, h5, h6,
 .marquee-item { color: #063C3D !important; }
 .stats { background: linear-gradient(135deg, #063C3D, #0A5D61) !important; border-color: rgba(245,182,74,.38) !important; }
 .stats .stat-label { color: rgba(255,255,255,.76); }
+.stats .stat-number { color: #FFFFFF; }
+.stats .stat-number .suffix { color: #F5B64A; }
 .cta-banner { background: linear-gradient(135deg, #E8F4F1, #DDF0EC) !important; }
 
 .home-page .hero {
